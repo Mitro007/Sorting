@@ -8,8 +8,8 @@ public class QuickSort {
 		int pIndex=start;
 		for(int i=start;i<end;i++) {
 			if(a[i]<pivot) {
-				// swap a[i] and a[pIndex]
-				a[i]=a[i]^a[pIndex]^(a[pIndex]=a[i]);
+				if(pIndex!=i)
+					a[i]=a[i]^a[pIndex]^(a[pIndex]=a[i]);
 				pIndex++;
 			}
 		}
